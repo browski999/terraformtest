@@ -43,6 +43,6 @@ resource "azurerm_resource_group" "rg" {
 #  container_access_type = "private"
 #}
 
-output "sa_name" {
+/* output "sa_name" {
   value = azurerm_storage_account.tfstate.name
-}
+} */
