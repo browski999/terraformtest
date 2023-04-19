@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "tfdemo-rg"
+    resource_group_name  = "myTFResourceGroup"
     storage_account_name = "tfstatebob"
     container_name       = "tfstatecontainer"
     key                  = "terraform.tfstate"
@@ -23,7 +23,7 @@ variable "location" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = "tfdemo-rg"
+  name = "myTFResourceGroup"
   location = var.location
 }
 
