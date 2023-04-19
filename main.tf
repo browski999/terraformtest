@@ -38,7 +38,7 @@ resource "azurerm_storage_account" "tfstate" {
 resource "azurerm_storage_container" "tfstatecontainer" {
   name                  = "tfstatecontainer"
   storage_account_name  = azurerm_storage_account.tfstate.name
-  container_access_type = "container"
+  container_access_type = "blob"
 }
 
 output "sa_name" {
