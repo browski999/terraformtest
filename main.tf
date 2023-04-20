@@ -6,15 +6,15 @@ terraform {
       version = "~> 3.0.2"
     }
   }
-
+  backend "azurerm" {
+    resource_group_name  = "bobresourcegroup"
+    storage_account_name = "bobstorageaccount99"
+    container_name = "mybobcontainer"
+    key                  = "terraform.tfstate"
+  }
   required_version = ">= 1.0.4"
 }
 
 provider "azurerm" {
   features {}
-}
-
-resource "azurerm_resource_group" "rg" {
-  name     = "myTFResourceGroup"
-  location = "UK South"
 }
